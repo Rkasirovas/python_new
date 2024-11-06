@@ -9,7 +9,7 @@
 
 ## git commit
 
-
+```python
 
 F = int(input("Įveskite temperatūrą pagal Farenheitą: "))
 
