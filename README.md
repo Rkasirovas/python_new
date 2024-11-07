@@ -288,7 +288,6 @@ while True:
 
     print("Visi kontaktai:", contacts)
 
-# iki cia ikelta i Github
 
 # functions
 
@@ -349,11 +348,24 @@ def validate_email(email):
         return False
     return True
 
-
 email = input("Įveskite el. pašto adresą: ")
 if validate_email(email):
     print("El. pašto adresas galiojantis.")
 else:
     print("El. pašto adresas negaliojantis.")
+
+
+
+
+def compound_interest(principal, rate, time):
+    return round(principal * (1 + rate) ** time, 2)
+
+principal = float(input("Įveskite pradinę sumą ($): "))
+rate = float(input("Įveskite metinę palūkanų normą (%): ")) / 100
+time = float(input("Įveskite laiką (metais): "))
+amount = compound_interest(principal, rate, time)
+print(f"Galutinė suma po {time} metų yra {amount} $.")
+
+# iki cia ikelta i Github
 
 
