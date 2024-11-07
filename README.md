@@ -290,6 +290,70 @@ while True:
 
 # iki cia ikelta i Github
 
+# functions
 
+def is_even_or_odd(num):
+    if num == 0:
+        return "Neither"
+    if num % 2 == 0: # ar lyginis ar nelyginis
+        return "Even"
+    else:
+        return "Odd"
+
+print (f"5 is {is_even_or_odd(5)}")
+print (f"12 is {is_even_or_odd(12)}")
+print (f"100 is {is_even_or_odd(100)}")
+print (f"0 is {is_even_or_odd(0)}")
+is_even_or_odd(5)
+
+
+def simple_calculator (a, b, operation):
+    if operation == "add":
+        return a + b
+    elif operation == "subtract":
+        return a - b
+    elif operation == "multiply":
+        return a * b
+    elif operation == "divide":
+        return a / b
+
+print (simple_calculator(5, 8, "add"))
+print (simple_calculator(1, 9, "multiply"))
+print (simple_calculator(100, 100, "subtract"))
+
+
+
+def calculate_bmi(height, weight):
+    return weight / (height**2)
+
+height = float(input("Įveskite ūgį metrais: "))
+weight = float(input("Įveskite svorį kilogramais: "))
+bmi = calculate_bmi(height, weight)
+print(f"KMI yra {bmi:.2f}.")
+
+
+
+def validate_email(email):
+    if email.count("@") != 1:
+        return False
+    username, domain = email.split("@")
+    if not username:
+        return False
+    if "." not in domain:
+        return False
+    domain_parts = domain.split(".")
+    if any(len(part) == 0 for part in domain_parts[:-1]):
+        return False
+    # Patikriname, ar domeno galūnė yra bent 2 simbolių ilgio
+    if len(domain_parts[-1]) < 2:
+        return False
+    return True
+
+
+email = input("Įveskite el. pašto adresą: ")
+if validate_email(email):
+    print("El. pašto adresas galiojantis.")
+else:
+    print("El. pašto adresas negaliojantis.")
 
 
