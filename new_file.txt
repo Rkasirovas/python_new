@@ -1,1 +1,8 @@
-Laukiama
+list_of_names = ["John", "Paul", "Elie", "Peter", "Ken", "Andy", "Matt"]
+
+for name in list_of_names:
+    if name[0].lower() == "p":
+        continue
+
+    result = name[len(name)//2:]
+    print (result)
